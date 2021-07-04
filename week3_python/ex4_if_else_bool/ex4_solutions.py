@@ -19,13 +19,15 @@ if not operator_valid:
 elif not numb_valid:
     print(f'Error, number {first_numb} or {second_numb} not valid')
 else:
-    if operator_valid == '+':
+    first_numb = int(first_numb)
+    second_numb = int(second_numb)
+    if operator == '+':
         result = first_numb + second_numb
-    elif operator_valid == '-':
+    elif operator == '-':
         result = first_numb - second_numb
-    elif operator_valid == '*':
+    elif operator == '*':
         result = first_numb * second_numb
-    elif operator_valid == '/':
+    elif operator == '/':
         if second_numb==0:
             print('Error, cannot devide with zero')
         else:
@@ -33,6 +35,39 @@ else:
 print(result)
 
 # 2
+month_short = "Jan"
+
+month_full = None
+if month_short == "Jan":
+    month_full = "January"
+elif month_short == "Feb":
+    month_full = "February"
+elif month_short == "Mar":
+    month_full = "March"
+elif month_short == "Apr":
+    month_full = "April"
+elif month_short == "May":
+    month_full = "May"
+elif month_short == "Jun":
+    month_full = "June"
+elif month_short == "Jul":
+    month_full = "July"
+elif month_short == "Aug":
+    month_full = "August"
+elif month_short == "Sep":
+    month_full = "September"
+elif month_short == "Oct":
+    month_full = "October"
+elif month_short == "Nov":
+    month_full = "November"
+elif month_short == "Dec":
+    month_full = "December"
+else:
+    month_full = "Unknow"
+
+print(month_full)
+
+# 4
 import random
 
 dice1 = random.randint(1,6)
@@ -46,7 +81,7 @@ all_dice_equal = (dice1==dice2) and (dice1==dice3) and (dice1==dice4) and (dice1
 if all_dice_equal:
     print('Yahtzee')
 
-# 3
+# 5
 bar_length = 10
 current_number = 100
 total_numb = 100
